@@ -1,0 +1,29 @@
+<head>
+  <title>Space prodbes</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Space probes</h1>
+    {{> spaceProbeList}}
+  </div>
+</body>
+
+<template name="spaceProbeList">
+  <div class="row">
+    {{#each spaceProbes}}
+    <div class="col-lg-4">
+      {{> spaceProbeListItem}}
+    </div>  
+    {{/each}}
+  </div>
+</template>
+
+<template name="spaceProbeListItem">
+  <h4>{{spacecraft}}</h4>
+  <p>{{organization}}</p>
+  <p>{{date}}</p>    
+  <p>{{type}}</p>
+  <p>{{status}}</p>
+  <p>{{notes}}</p>
+</template>
